@@ -8,6 +8,7 @@ gem 'sass'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
+  gem 'annotate'
 end
 
 group :test do
