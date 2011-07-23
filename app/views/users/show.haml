@@ -1,10 +1,12 @@
 .profile
   .main
-    -# %h1
-    = gravatar_for @user
-    = @user.name
+    %h1
+      = gravatar_for @user
+      = @user.name
 
   .sidebar.round
+    %br
+    %br
     %strong Name 
     #{@user.name}
     %br
