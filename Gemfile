@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
 gem 'sqlite3', '1.3.3'
+gem 'gravatar_image_tag'
 
 gem 'haml'
 gem 'sass'
@@ -18,4 +19,5 @@ group :test do
   gem 'autotest-rails-pure', '4.1.2'
   gem 'autotest-fsevent', '0.2.4'
   gem 'autotest-growl', '0.2.9'
+  gem 'factory_girl_rails'
 end

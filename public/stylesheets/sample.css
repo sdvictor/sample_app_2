@@ -84,3 +84,23 @@ footer {
 
 footer nav {
   float: none; }
+
+.main {
+  width: 50%;
+  padding: 1em;
+  float: left;
+  background: #ffffcc; }
+
+.sidebar {
+  float: right;
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+  background: #ffffcc; }
+
+.profile img.gravatar {
+  border: 1px solid #999999;
+  margin-bottom: -15px; }
+
+.clear {
+  clear: both; }

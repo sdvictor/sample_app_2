@@ -1,3 +1,14 @@
-.user_list
-  %ul
-    %li #{@user.name}, #{@user.email}
+.profile
+  .main
+    -# %h1
+    = gravatar_for @user
+    = @user.name
+
+  .sidebar.round
+    %strong Name 
+    #{@user.name}
+    %br
+    %strong URL 
+    #{@user.email}
+    
+.clear  
