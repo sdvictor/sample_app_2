@@ -1,2 +1,23 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+%h1 Signup
+= form_for @user do |f|
+  = render 'shared/error_messages'
+  = field_set_tag do
+    = f.label :name
+    = f.text_field :name
+  = field_set_tag do
+    = f.label :email
+    = f.text_field :email
+  = field_set_tag do
+    = f.label :password
+    = f.password_field :password
+  = field_set_tag do
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation  
+  = field_set_tag do
+    = f.submit
+
+-# = form_tag :url => {:action => :create} do
+-#   = field_set_tag do
+-#     = label :name
+-#     = text_field :user_name
+

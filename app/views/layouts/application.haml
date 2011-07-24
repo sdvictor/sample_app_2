@@ -11,6 +11,8 @@
   %body
     .container
       = render "layouts/header"
-      %section.round
+      %section.round        
+        - flash.each do |key, value| 
+          .flash{:class => key}= value
         = yield
       = render "layouts/footer"  
