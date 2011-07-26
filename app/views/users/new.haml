@@ -1,23 +1,6 @@
 %h1 Signup
 = form_for @user do |f|
-  = render 'shared/error_messages'
-  = field_set_tag do
-    = f.label :name
-    = f.text_field :name
-  = field_set_tag do
-    = f.label :email
-    = f.text_field :email
-  = field_set_tag do
-    = f.label :password
-    = f.password_field :password
-  = field_set_tag do
-    = f.label :password_confirmation
-    = f.password_field :password_confirmation  
+  = render 'user_form', :f => f
   = field_set_tag do
     = f.submit
-
--# = form_tag :url => {:action => :create} do
--#   = field_set_tag do
--#     = label :name
--#     = text_field :user_name
 

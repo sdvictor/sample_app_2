@@ -4,6 +4,8 @@ gem 'rails', '3.0.7'
 gem 'sqlite3', '1.3.3'
 gem 'gravatar_image_tag'
 gem "awesome_print"
+gem 'faker'
+gem 'will_paginate', '3.0.pre2'
 
 gem 'haml'
 gem 'sass'

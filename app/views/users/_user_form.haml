@@ -1,0 +1,15 @@
+= render 'shared/error_messages', :object => f.object
+= field_set_tag do
+  = f.label :name
+  = f.text_field :name
+= field_set_tag do
+  = f.label :email
+  = f.text_field :email
+= field_set_tag do
+  = f.label :password
+  = f.password_field :password
+= field_set_tag do
+  = f.label :password_confirmation
+  = f.password_field :password_confirmation
+  
+

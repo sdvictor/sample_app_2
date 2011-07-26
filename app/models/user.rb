@@ -11,6 +11,9 @@
 
 require 'digest'
 class User < ActiveRecord::Base
+  cattr_reader :per_page
+  @@per_page = 2
+  
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
 
@@ -26,9 +29,10 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   
-
   
   def has_password?(submitted_password)
+    ap encrypted_password
+    ap encrypt(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end
   
@@ -47,7 +51,7 @@ class User < ActiveRecord::Base
   private
     def encrypt_password
       self.salt = make_salt if new_record?
-      self.encrypted_password = encrypt(password)
+      self.encrypted_password = encrypt(password)      
     end
     
     def encrypt(string)

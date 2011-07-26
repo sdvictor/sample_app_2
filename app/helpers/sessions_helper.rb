@@ -30,4 +30,28 @@ module SessionsHelper
     cookies.signed[:signin_user] || [nil, nil]
   end
   
+  def deny_access
+    store_location
+    redirect_to signin_path, :notice => "Please sign in first"
+  end
+  
+  def current_user? user
+    current_user == user
+  end
+  
+  def return_back_or(default)
+    redirect_to (session[:return_to] || default)
+    clear_return_to
+  end
+  
+  private
+  
+  def store_location
+    session[:return_to] = request.fullpath
+  end
+  
+  def clear_return_to
+    session[:return_to] = nil
+  end
+  
 end
